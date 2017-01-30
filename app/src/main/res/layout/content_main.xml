@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.kazi.myprofile.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:id="@+id/profile_info_container"
+        android:orientation="vertical"
+        android:background="@drawable/toy_me">
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:layout_weight="7.5"
+           android:background="#CCa3a2a0">
+
+           <android.support.design.widget.FloatingActionButton
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/btn_take_pic"
+               android:layout_centerHorizontal="true"
+               android:layout_margin="5dp"
+               app:backgroundTint="#FFFFFF"
+               app:srcCompat="@android:drawable/ic_menu_camera" />
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/txt_user_name"
+               android:layout_below="@id/btn_take_pic"
+               android:layout_centerInParent="true"
+               android:text="Kazi Abdullah Al Mamun"
+               android:textColor="#FFFFFF"
+               android:textSize="18sp"
+               android:layout_margin="2dp" />
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/txt_location"
+               android:layout_below="@id/txt_user_name"
+               android:layout_centerInParent="true"
+               android:drawableLeft="@drawable/ic_location_on_black_18dp"
+               android:text="Oxford School"
+               android:textColor="#FFFFFF"
+               android:textSize="14sp"
+               android:layout_margin="1dp"/>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/txt_mail_id"
+                   android:layout_below="@id/txt_location"
+                   android:layout_centerInParent="true"
+                   android:text="My Mail Id"
+                   android:textColor="#FFFFFF"
+                   android:textSize="14sp"
+                   android:layout_margin="1dp"/>
+
+           <android.support.design.widget.FloatingActionButton
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/floatingBtn_edit_info"
+               app:fabSize="mini"
+               android:layout_gravity="end"
+               app:backgroundTint="#e76350"
+               app:srcCompat="@android:drawable/ic_menu_edit"
+               android:layout_alignTop="@+id/txt_mail_id"
+               android:layout_toEndOf="@+id/txt_user_name"
+               android:layout_marginStart="19dp" />
+       </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.5"
+            android:background="#CC59518a">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:id="@+id/container_like_button_activity">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_total_activity"
+                    android:text="128"
+                    android:textSize="18sp"
+                    android:textColor="#FFFFFF"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Activity"
+                    android:textColor="#ddae4e"
+                    android:textSize="14sp"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width=".5dp"
+                android:layout_height="match_parent"
+                android:background="#504c76"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:id="@+id/container_like_button_pending_activity">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_total_pending_activity"
+                    android:text="128"
+                    android:textSize="18sp"
+                    android:textColor="#FFFFFF"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pending Activity"
+                    android:textColor="#ddae4e"
+                    android:textSize="14sp"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width=".5dp"
+                android:layout_height="match_parent"
+                android:background="#504c76"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:id="@+id/container_like_button_my_score">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_total_my_score"
+                    android:text="128"
+                    android:textSize="18sp"
+                    android:textColor="#FFFFFF"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="My Score"
+                    android:textColor="#ddae4e"
+                    android:textSize="14sp"
+                    android:gravity="center"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"></android.support.v7.widget.RecyclerView>
+
+</LinearLayout>
