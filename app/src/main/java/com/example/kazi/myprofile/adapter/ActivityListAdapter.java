@@ -1,6 +1,7 @@
-package com.example.kazi.myprofile;
+package com.example.kazi.myprofile.adapter;
 
 import android.content.Context;
+import android.graphics.Paint;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,9 @@ import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.example.kazi.myprofile.R;
+import com.example.kazi.myprofile.model.Activities;
 
 import java.util.List;
 
@@ -40,12 +44,17 @@ public class ActivityListAdapter extends RecyclerView.Adapter<ActivityListAdapte
 
         Activities activities = activitiesList.get(position);
 
-        holder.txtActivityName.setText(activities.getActivityName());
-        holder.activityRatings.setRating(activities.getRatings());
+        String activityName = activities.getActivityName();
+        float activityRating = activities.getRatings();
+        Boolean isCompleted = activities.isActivityCompleted();
 
-        if (activities.isActivityCompleted()){
+        holder.txtActivityName.setText(activityName);
+        holder.activityRatings.setRating(activityRating);
+
+        if (isCompleted){
             holder.btnDetails.setBackgroundColor(context.getResources().getColor(R.color.btnColorGreen));
             holder.imgActivityCompletionIndicator.setImageDrawable(context.getDrawable(R.drawable.activities_completed));
+            holder.txtActivityName.setPaintFlags(Paint.STRIKE_THRU_TEXT_FLAG);
         }else{
             holder.btnDetails.setBackgroundColor(context.getResources().getColor(R.color.btnColorRed));
             holder.imgActivityCompletionIndicator.setImageDrawable(context.getDrawable(R.drawable.activities_not_completed));

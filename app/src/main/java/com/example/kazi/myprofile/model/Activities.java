@@ -1,4 +1,4 @@
-package com.example.kazi.myprofile;
+package com.example.kazi.myprofile.model;
 
 /**
  * Created by Kazi on 1/31/2017.

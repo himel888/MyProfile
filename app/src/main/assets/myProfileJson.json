@@ -1,0 +1,42 @@
+{
+  "user":{
+    "name": "Kazi Abdullah Al Mamun",
+    "address": "Vutergoli",
+    "mail": "kazi.a.mamun@gmail.com"
+  },
+  "activities": [
+    {
+      "activityName": "Wake Up Sleep From Morning",
+      "activityRating": 4.5,
+      "isCompleted": false
+    },
+     {
+      "activityName": "Brush Your Teeth",
+      "activityRating": 4.5,
+      "isCompleted": true
+    },
+     {
+      "activityName": "Go to toilet",
+      "activityRating": 4,
+      "isCompleted": false
+    },
+     {
+      "activityName": "Change sleeping dress",
+      "activityRating": 5,
+      "isCompleted": false
+    },
+     {
+      "activityName": "Take breakfast",
+      "activityRating": 3.5,
+      "isCompleted": true
+    },
+    {"activityName": "Take Lunch",
+      "activityRating": 3.5,
+      "isCompleted": true},
+    {"activityName": "Take Supper",
+      "activityRating": 3.5,
+      "isCompleted": true}
+
+    ],
+  "totalNotofication": 5
+}
