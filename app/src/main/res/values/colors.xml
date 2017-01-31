@@ -3,4 +3,8 @@
     <color name="colorPrimary">#FF4D59A4</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#59518a</color>
+    <color name="btnColorRed">#e76350</color>
+    <color name="btnColorGreen">#5daf17</color>
+    <color name="evenItemRowColor">#f5f5f5</color>
+    <color name="oddItemRowColor">#f6f4ff</color>
 </resources>
